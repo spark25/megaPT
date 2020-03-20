@@ -67,6 +67,29 @@ $screen-xl-min: 1200px;
 
 }
 
+.btn{
+  padding: 8px 15px;
+  background: none;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+.btn.medium{
+  font-size: 1.2rem;
+}
+.btn.primary{
+  color: #eee;
+  background: rgba($color: $primary, $alpha: 0.3) ;
+  width: fit-content;
+  border: 1px solid $primary;
+
+&:hover{
+  background: rgba($color: $primary, $alpha: 0.8) ;
+}
+}
+
+
 
 // animate css
 

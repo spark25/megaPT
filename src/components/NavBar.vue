@@ -65,11 +65,13 @@ header {
       li {
         padding: 5px;
         margin: 5px;
-        font-weight: 700;
-        color: #ddd;
+        font-weight: 500;
+        color: #eee;
         position: relative;
         text-transform: uppercase;
-
+        &:hover{
+             color: #fff;
+        }
         cursor: pointer;
         &::after {
           content: "";
@@ -90,7 +92,8 @@ header {
 }
 
 .lightHeader {
-  background-color: rgba($color: #000000, $alpha: 0);
+  background-color: rgba($color: #000000, $alpha: 0.2);
+  // box-shadow: 0px 5px 18px -12px #131313;
   .brand {
     opacity: 0;
     transition: opacity 0.3s ease-in;
@@ -99,7 +102,7 @@ header {
 
 .solidHeader {
   background-color: #f5f5f5;
-  box-shadow: 0px 5px 18px -12px #afafaf;
+  box-shadow: 0px 5px 18px -12px #444444;
   nav {
     ul {
       li {
@@ -113,10 +116,8 @@ header {
   .brand {
     opacity: 1;
   }
-
 }
-.showBrand{
-
+.showBrand {
   .brand {
     opacity: 1;
   }
