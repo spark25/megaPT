@@ -69,6 +69,7 @@ header {
         color: #eee;
         position: relative;
         text-transform: uppercase;
+         font-family: "Oswald", sans-serif;
         &:hover{
              color: #fff;
         }
@@ -92,7 +93,7 @@ header {
 }
 
 .lightHeader {
-  background-color: rgba($color: #000000, $alpha: 0.2);
+  // background-color: rgba($color: #000000, $alpha: 0.2);
   // box-shadow: 0px 5px 18px -12px #131313;
   .brand {
     opacity: 0;
@@ -101,12 +102,15 @@ header {
 }
 
 .solidHeader {
-  background-color: #f5f5f5;
+  background-color: #fff;
   box-shadow: 0px 5px 18px -12px #444444;
   nav {
     ul {
       li {
-        color: #474747;
+        color: #4e4e4e;
+         &:hover{
+             color: #141414;
+        }
       }
       .router-link-exact-active {
         color: #141414;

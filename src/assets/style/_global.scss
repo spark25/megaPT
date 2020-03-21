@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,600|Montserrat:400,500,700|Poppins:400,600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700|Poppins:400,600&display=swap');
 
 // font-family: 'Montserrat', sans-serif;
 // font-family: 'Poppins', sans-serif;
+// font-family: 'Oswald', sans-serif;
 
 // colors
 $primary: #a22522;
+$blue: #1b327e;
 
 //Screen size
 
@@ -79,13 +81,14 @@ $screen-xl-min: 1200px;
   font-size: 1.2rem;
 }
 .btn.primary{
-  color: #eee;
-  background: rgba($color: $primary, $alpha: 0.3) ;
+  color: #f5f5f5;
+  background: rgba($color: $blue, $alpha: 0.3) ;
   width: fit-content;
-  border: 1px solid $primary;
+  border: 1px solid $blue;
 
 &:hover{
-  background: rgba($color: $primary, $alpha: 0.8) ;
+  color: #fff;
+  background: rgba($color: $blue, $alpha: 1) ;
 }
 }
 
