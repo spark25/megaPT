@@ -1,5 +1,5 @@
 <template>
-  <header class="lightHeader">
+  <div class="topHeader lightHeader">
     <div class="brand">
       <img src="../assets/mega.png" height="40px" alt srcset />
     </div>
@@ -9,43 +9,31 @@
           v-for="(menu, i) in nav"
           :key="i"
           tag="li"
-          :to="{name: menu.route}"
-        >{{menu.name}}</router-link>
+          :to="{ name: menu.route }"
+          >{{ menu.name }}</router-link
+        >
       </ul>
     </nav>
-  </header>
+  </div>
 </template>
 
 <script>
 export default {
+  props:["nav"],
   data() {
     return {
-      nav: [
-        {
-          name: "Home",
-          route: "Home"
-        },
-        {
-          name: "About",
-          route: "About"
-        },
-        {
-          name: "Projects",
-          route: "About"
-        },
-        {
-          name: "Contact",
-          route: "About"
-        }
-      ]
+      // nav: []
     };
   },
-  methods: {}
+  methods: {},
+  // created(){
+  //   this.nav =  this.$store.state.nav
+  // }
 };
 </script>
 
 <style lang="scss">
-header {
+.topHeader {
   height: 64px;
   width: 100%;
   position: fixed;
@@ -66,13 +54,11 @@ header {
         padding: 5px;
         margin: 5px;
         font-weight: 500;
-        color: #eee;
+       
         position: relative;
         text-transform: uppercase;
-         font-family: "Oswald", sans-serif;
-        &:hover{
-             color: #fff;
-        }
+        font-family: "Oswald", sans-serif;
+    
         cursor: pointer;
         &::after {
           content: "";
@@ -95,6 +81,19 @@ header {
 .lightHeader {
   // background-color: rgba($color: #000000, $alpha: 0.2);
   // box-shadow: 0px 5px 18px -12px #131313;
+    nav {
+    ul {
+      li {
+        color: #eee;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .router-link-exact-active {
+        color: #fff;
+      }
+    }
+  }
   .brand {
     opacity: 0;
     transition: opacity 0.3s ease-in;
@@ -108,8 +107,8 @@ header {
     ul {
       li {
         color: #4e4e4e;
-         &:hover{
-             color: #141414;
+        &:hover {
+          color: #141414;
         }
       }
       .router-link-exact-active {
@@ -129,15 +128,11 @@ header {
 
 .router-link-exact-active {
   position: relative;
-  color: #fff;
+  // color: #fff;
   &::after {
     content: "";
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: $primary;
+    width: 100% !important;
+
   }
 }
 </style>
